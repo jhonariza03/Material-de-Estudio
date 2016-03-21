@@ -1,0 +1,35 @@
+.generalTable
+{
+	width: 40%;
+    margin-left: 30%;
+}
+
+#resultContent
+{
+	width: 100%;
+    border-style: ridge;
+}
+
+#resultContentPass
+{
+	width: 100%;
+    border-style: ridge;
+}
+
+
+.studentTitle
+{
+	background: darkgray;
+}
+
+thead
+{
+	background: darkturquoise;
+}
+
+form
+{
+	border-style: inset;
+    border-radius: 14px;
+    padding: 15px;
+}

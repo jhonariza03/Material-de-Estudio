@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button id="boton1">Mi boton</button>
+
+    <h1 id="enca1"></h1>
+
+    <script>
+    var elemento = document.getElementById("boton1");
+    elemento.addEventListener("click", mostrarMensaje1);
+    elemento.addEventListener("mouseout", mostrarMensaje2);
+
+    function mostrarMensaje1() {
+        document.getElementById("enca1").innerHTML="Se realizo un evento click!!";
+    }
+
+    function mostrarMensaje2() {
+        document.getElementById("enca1").innerHTML="Se realizo un evento mouseover!!";
+    }
+    </script>
+
+</body>
+
+</html>

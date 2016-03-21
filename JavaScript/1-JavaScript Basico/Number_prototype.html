@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'UTF-8'>
+	<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script>
+	<title>Prototipos Number</title>
+</head>
+<body>
+		<h1>Respuesta llamado al prototype</h1>
+		<p id='p1'></p>
+		<h1>Exponenciales</h1>
+		<p id='e1'></p>
+		<p id='e2'></p>
+		<p id='e3'></p>
+		<h1>Cadenas</h1>
+		<p id='s1'></p>
+		<p id='s2'></p>
+</body>
+<script>
+	
+	Number.prototype.metodoSuma = function()
+	{
+		return this + 10;
+	}
+	var number1 = 15;
+	document.getElementById('p1').innerHTML = number1.metodoSuma();
+
+	var number2 = 0.5656;
+	var number3 = 23.4565;
+	var number4 = 12.6477;
+
+	document.getElementById('e1').innerHTML = number2.toExponential();
+	document.getElementById('e2').innerHTML = number3.toFixed(2); // redondear decimales
+	document.getElementById('e3').innerHTML = number4.toPrecision(5);
+
+	var string1 = 'TODOS DESEAMOS LLEGAR A VIEJOS Y TODOS NEGAMOS QUE HEMOS LLEGADO';
+	var string2 = 'La necesidad de tener razón: señal de espíritu vulgar';
+	document.getElementById('s1').innerHTML = string1.toLowerCase();
+	document.getElementById('s2').innerHTML = string2.toUpperCase();
+
+</script>
+</html>

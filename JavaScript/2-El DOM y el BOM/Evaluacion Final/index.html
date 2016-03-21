@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'UTF-8'>
+	<title>Evaluacion JavaScript : Lo esencial</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<table class="generalTable">
+		<caption>Calificaciones Estudiantes</caption>
+		<thead>
+			<tr>
+				<th colspan="4">Next University</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="4">
+					<table>
+						<tr>
+							<td style="width: 40%;">
+								<form id='studentForm'>
+									Código:
+									<input type="text" id="code"/>
+									Nombre:
+									<input type="text" id="name"/>
+									Nota:
+									<input type="number" id="qualify"/>
+								</form>
+							</td>
+							<td align="center">
+								<input type="button" name="saveStudent" id="saveStudent" value="Registrar Estudiante">
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr style="height: 20px;"></tr>
+			<tr>
+				<td>
+					<input type="button" name="studentList" id="studentList" value="Listar Estudiantes">
+				</td>
+				<td>
+					<input type="button" name="studentAverage" id="studentAverage" value="Promedio General">
+				</td>
+				<td>
+					<input type="button" name="bestQualify" id="bestQualify" value="Mejor Estudiante">
+				</td>
+				<td>
+					<input type="button" name="badQualify" id="badQualify" value="Peor Estudiante">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<table id="resultContent">
+						
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" align="center">
+					<input type="button" name="aprovedStudent" id="aprovedStudent" value="Estudiantes que pasan la materia" onclick="showStudentsPass()">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<table id="resultContentPass">
+						
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<script src="js/students.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

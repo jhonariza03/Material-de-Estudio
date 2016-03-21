@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patron Modular</title>
+	<!--<script src="jquery-1.12.2.js"></script> -->
+</head>
+<body>
+	<script>
+	var objeto = (function(){
+
+		var propiedadPrivada = "Valor Privado";
+		var propiedadPublica = "Valor Publico";
+
+		var cambiarPrivada = function ()
+		{
+			propiedadPrivada = "Valor Muy Privado";
+		};
+
+		var mostrarPrivada =  function()
+		{
+			console.log(propiedadPrivada);
+			cambiarPrivada();
+		};
+		return{
+			propiedadPublica: propiedadPublica,
+			mostrarPrivada: mostrarPrivada
+		};
+	})();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>POO example</title>
+</head>
+<body>
+		<h1>Promedio del estudiante</h1>
+		<p id='p1'></p>
+		<button onclick="myFunction();">Mostrar Promedio</button>
+</body>
+
+<script>
+	
+	function Estudiante (codigo,nombre,nota1, nota2)
+	{
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.nota1 = nota1;
+		this.nota2 = nota2;
+
+		this.promedio = function()
+		{
+			document.getElementById('p1').innerHTML = (this.nota1 + this.nota2)/2;
+		}
+	}
+
+    var estudiante = new Estudiante('001','Jhon Ariza',4.5,5.0);
+
+    function myFunction()
+    {
+    	estudiante.promedio();
+    }
+    
+</script>
+</html>

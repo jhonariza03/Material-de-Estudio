@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>metodos del document</title>
+	<meta content="UTF-8">
+</head>
+<body>
+	<h1>Calculo Compra</h1>
+	<table border='1' style="width: 300px;">
+		<thead>
+			<tr>
+				<th>Producto</th>
+				<th>Precio</th>
+				<th>Cantidad</th>
+				<th>Subtotal</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Camisa</td>
+				<td>
+					<input type="text" name="precio" id="precio1" value="30000">
+				</td>
+				<td>
+					<input type="text" name="cantidad" id = "cantidad1">
+				</td>
+				<td>
+					<input type="text" name="subtotal" id= "subtotal1">
+				</td>
+			</tr>
+			<tr>
+				<td>Gorra</td>
+				<td>
+					<input type="text" name="precio" id="precio2" value="50000">
+				</td>
+				<td>
+					<input type="text" name="cantidad" id = "cantidad2">
+				</td>
+				<td>
+					<input type="text" name="subtotal" id= "subtotal2">
+				</td>
+			</tr>
+			<tr>
+				<td>Zapatos</td>
+				<td>
+					<input type="text" name="precio" id="precio3" value="60000">
+				</td>
+				<td>
+					<input type="text" name="cantidad" id = "cantidad3">
+				</td>
+				<td>
+					<input type="text" name="subtotal" id= "subtotal3">
+				</td>
+			</tr>
+			<tr>
+				<td>Pantalon</td>
+				<td>
+					<input type="text" name="precio" id="precio4" value="80000">
+				</td>
+				<td>
+					<input type="text" name="cantidad" id = "cantidad4">
+				</td>
+				<td>
+					<input type="text" name="subtotal" id= "subtotal4">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<b>Total Compra:</b>
+	<input type="text" id="totalcompra">
+	<br>
+	<br>
+	<button onclick="calcularSubTotales()" >Calcular Subtotales</button>
+	<button onclick="calcularTotal()">Calcular Total</button>
+</body>
+<script>
+	var precioTags = document.getElementsByName('precio');
+	for (var i = 0; i < precioTags.length; i++) {
+		precioTags[i].disabled = true;
+	};
+
+
+	var cantidadTags = document.getElementsByName('cantidad');
+	for (var i = 0; i < cantidadTags.length; i++) {
+		cantidadTags[i].value = 0;
+	};
+
+	var subtotalTags = document.getElementsByName('subtotal');
+	for (var i = 0; i < subtotalTags.length; i++) {
+		subtotalTags[i].disabled = true;
+	};
+
+	var totalcompra = document.getElementById('totalcompra');
+	totalcompra.value = 0;
+	totalcompra.disabled =true;
+
+	function calcularSubTotales()
+	{
+		precio1 = parseInt(document.getElementById('precio1').value);
+		cantidad1 = parseInt(document.getElementById('cantidad1').value);
+		document.getElementById('subtotal1').value = precio1 * cantidad1;
+
+		precio2 = parseInt(document.getElementById('precio2').value);
+		cantidad2 = parseInt(document.getElementById('cantidad2').value);
+		document.getElementById('subtotal2').value = precio2 * cantidad2;
+
+		precio3 = parseInt(document.getElementById('precio3').value);
+		cantidad3 = parseInt(document.getElementById('cantidad3').value);
+		document.getElementById('subtotal3').value = precio3 * cantidad3;
+
+		precio4 = parseInt(document.getElementById('precio4').value);
+		cantidad4 = parseInt(document.getElementById('cantidad4').value);
+		document.getElementById('subtotal4').value = precio4 * cantidad4;
+
+	}
+
+	function calcularTotal()
+	{
+		var total = 0;
+		var subtotalTags = document.getElementsByName('subtotal');
+		for (var i = 0; i < subtotalTags.length; i++) {
+			total += parseInt(subtotalTags[i].value);
+		}
+
+		totalcompra.value = total;
+	}
+</script>
+</html>

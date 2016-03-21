@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'UTF-8'>
+	<title>Hoja de Vida</title>
+</head>
+<body onload="onLoad()">
+	<form onreset="reset()">
+		<h1>Información Personal</h1>
+		Nombres : <input type="text" id="nombres" onchange="changeName(this)" /><br>
+		Apellidos : <input type="text" id="apellidos" onchange="changeSurname(this)" /><br>
+		Dirección : <input type="text" id="direccion"/><br>
+		Edad : <input type="text" id="edad"/><br>
+		Fecha de Nacimiento : <input type="date" id="nacimiento"/><br>
+		Lugar de Nacimiento : <input type="text" id="lugar"/><br>
+		Estado Civil : <input type="text" id="civil"/><br>
+
+		<h2>Información Académica</h2>
+		Universidad: <input type="text" id="universidad"/><br>
+		Profesión: <input type="text" id="profesion"/><br>
+		Observaciones <textarea id="observacion" onselect="selectText()"></textarea><br>
+
+		<input type="button" value="Enviar" onclick="sendForm()">
+		<input type="reset" value="Restablecer">
+	</form>
+</body>
+
+<script type="text/javascript">
+	function onLoad()
+	{
+		alert('Bienvenido a su formato de hoja de vida');
+	}
+
+	function sendForm()
+	{
+		alert('Su hoja de vida ha sido guardada correctamente');
+	}
+
+	function selectText()
+	{
+		alert('Se ha seleccionado el texto');
+	}
+
+	function changeName(obj)
+	{
+		obj.value = obj.value.toUpperCase();
+	}
+
+	function changeSurname(obj)
+	{
+		obj.value = obj.value.toUpperCase();
+	}
+
+	function reset()
+	{
+		alert('Se ha restablecido el formulario');
+	}
+
+</script>
+</html>

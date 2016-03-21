@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mi Reloj</title>
+	<style type="text/css">
+		#myReloj
+		{
+			background-color:black;
+			font-size:35px;
+			color: green;
+			width: 200px;
+			height:50px;
+			padding:5px;
+		}
+	</style>
+</head>
+<body>
+	<div id = 'myReloj'>
+		00:00:00
+	</div>
+	<br>
+	<button onclick="comenzar()">Comenzar Conteo</button>
+	<button onclick="detener()">Detener Conteo</button>
+</body>
+
+<script>
+	var funcion = null; 
+	function incrementar()
+	{
+		var fecha =  new Date();
+		var horas = fecha.getHours();
+		var minutos = fecha.getMinutes();
+		var segundos =  fecha.getSeconds();
+		if(horas < 10)
+		{
+			horas = '0'+ horas;
+		}
+		if(minutos < 10)
+		{
+			minutos = '0' + minutos;
+		}
+		if (segundos < 10)
+		{
+			segundos = '0'+segundos;
+		}
+
+		document.getElementById('myReloj').innerHTML = horas + ':' + minutos +':'+segundos;
+	}
+
+	function comenzar()
+	{
+		funcion = setInterval(incrementar,1000);
+	}
+	function detener()
+	{
+		clearInterval(funcion);
+	}
+</script>
+</html>

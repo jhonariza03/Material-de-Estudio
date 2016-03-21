@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suma de Numeros</title>
+</head>
+<body onload="confirmar()">
+	<h1>Suma de Numeros</h1>
+</body>
+
+<script>
+	function confirmar()
+	{
+		if(confirm('Desea Sumar 2 Numeros?') == true)
+		{
+			var num1 = prompt('Primer Numero');
+			var num2 = prompt('Segundo Numero');
+			alert('La suma de los dos numeros es: '+ (parseInt(num1) + parseInt(num2)));
+		}
+
+	}
+
+</script>
+</html>

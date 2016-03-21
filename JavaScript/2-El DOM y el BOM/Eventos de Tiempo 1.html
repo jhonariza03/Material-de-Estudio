@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id='numero'>0</p>
+	<br>
+	<button onclick="iniciarConteo()">Iniciar Conteo</button>
+</body>
+<script type="text/javascript">
+	var inval;
+    var numero = 0;
+    function iniciarConteo() {
+        inval = setInterval(function() {
+            numero = numero + 10;
+            document.getElementById("numero").innerHTML = numero;    
+            if (numero == 150) {
+                clearInterval(inval)
+                alert("Conteo terminado!!")
+            }
+        }, 2000);
+    }
+</script>
+</html>

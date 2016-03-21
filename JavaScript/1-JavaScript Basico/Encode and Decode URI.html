@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encode and Decode</title>
+</head>
+<body>
+	<h1>Encode URI</h1>
+	<p id='e1'></p>
+
+	<h1>Decode URI</h1>
+	<p id='d1'></p>
+</body>
+<script>
+	var uri1 = 'http://nextuniversity.com/es/';
+	var uri2 = 'https://www.facebook.com/';
+	encURI1 = encodeURIComponent(uri1);
+	decURI1 = decodeURIComponent('file:///D:/Next%20University/JavaScript/1-JavaScript%20Basico/Encode%20and%20Decode%20URI.html');
+	document.getElementById('e1').innerHTML = encURI1;
+	document.getElementById('d1').innerHTML = decURI1;
+</script>
+</html>

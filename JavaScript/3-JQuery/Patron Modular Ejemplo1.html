@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patron Modular</title>
+	<!--<script src="jquery-1.12.2.js"></script> -->
+</head>
+<body>
+	<script>
+	var producto = (function(){
+
+		var codigo = "001";
+		var nombre = "Camisa Roja";
+		var precio = 35000;
+		var cantidad = 8;
+
+		  var mostrarCodigo = function() {
+            console.log(codigo);
+        };
+
+        var mostrarNombre = function() {
+            console.log(nombre);
+        };
+
+        var mostrarPrecio = function() {
+            console.log(precio);
+        };
+
+         var totalProducto = function() {
+            console.log(precio*cantidad);
+        };
+
+
+        return {
+            mostrarCodigo: mostrarCodigo,
+            mostrarNombre: mostrarNombre,
+            mostrarPrecio: mostrarPrecio,
+            totalProducto: totalProducto,
+            codigo : codigo
+        };
+    })();
+	producto.mostrarCodigo();
+	producto.mostrarNombre();
+	producto.mostrarPrecio();
+	producto.totalProducto();
+
+	</script>
+</body>
+</html>

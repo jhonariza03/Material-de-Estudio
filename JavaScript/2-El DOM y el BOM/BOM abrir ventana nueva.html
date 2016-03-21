@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Manejando el BOM</title>
+</head>
+<body>
+	<button onclick="abrirVentana()">Abrir Ventana</button>
+	<button onclick="moverVentana()">Mover Ventana</button>
+	<button onclick="dimVentana()">Cambiar Dimension Ventana</button>
+	<button onclick="cerrarVentana()">Cerrar Ventana</button>
+	<button onclick="mostrarDimension()">Mostrar Dimensiones Ventana</button>
+</body>
+<script>
+
+	var window1;
+	function abrirVentana()
+	{
+		window1 = window.open("","_blank","width = 400, height = 200")
+	}
+
+	function moverVentana()
+	{
+		window1.moveTo(500,400);
+		window1.focus();
+	}
+
+	function dimVentana()
+	{
+		window1.resizeTo(600,600);
+		window1.focus();
+	}
+
+	function cerrarVentana()
+	{
+		window1.close();
+	}
+
+	function mostrarDimension()
+	{
+		var html ='';
+		html += '<p>availHeight: '+screen.availHeight+'</p>';
+		html += '<p>availWidth: '+screen.availWidth+'</p>';
+		html += '<p>height: '+screen.height+'</p>';
+		html += '<p>width: '+screen.width+'</p>';
+		html += '<p>colorDepth: '+screen.colorDepth+'</p>';
+		window1.document.write(html);
+		window1.focus();
+	}
+</script>
+</html>

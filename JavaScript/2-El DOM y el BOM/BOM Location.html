@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Location</title>
+</head>
+<body>
+	<button onclick="obtenerURL()">Obtener URL</button>
+	<button onclick="obtenerRuta()">Obtener Ruta</button>
+	<button onclick="obtenerProtocolo()">Obtener Protocolo</button>
+	<button onclick="obtenerHostname()">Obtener Hostname</button>
+</body>
+
+<script>
+	function obtenerURL()
+	{
+		alert('la url de la pagina es: '+location.href);
+	}
+
+	function obtenerRuta()
+	{
+		alert('la ruta de la pagina es: '+location.pathname);
+	}
+
+	function obtenerProtocolo()
+	{
+		alert('el protocolo de la pagina es: '+location.protocol);
+	}
+
+	function obtenerHostname()
+	{
+		alert('el hostname de la pagina es: '+location.hostname);
+	}
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+	<meta charset="UTF-8"/>
+<title>Adelante</title>
+<script>
+function adelante() {
+    window.history.forward()
+}
+
+function atras() {
+    window.history.back()
+}
+
+function avanzar() {
+    window.history.go(1)
+}
+
+function retroceder() {
+    window.history.go(-1)
+}
+</script>
+</head>
+<body>
+<a href="atras.html">Ir a atrás.</a>
+<br>
+<br>
+<input type="button" value="Adelante" onclick="adelante()">
+<p>Nota: Para hacer uso de la porpiedad adelante (forward), antes debemos de ir primero a la propiedad atrás (back).</p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modificar Atributos</title>
+	<meta charset ="UTF-8">
+	<script src="jquery-1.12.2.js"></script>
+	<script type="text/javascript">
+         $(document).ready(function(){
+         	$('#boton1').click(function(){
+         		var mensaje = '<h1>Ids</h1>';
+         		var idInput = $('#miInput').attr('id');
+         		var idEncabezado = $('#miEncabezado').attr('id');
+         		var idTabla = $('#miTabla').attr('id');
+         		var idImagen = $('#miImagen').attr('id');
+         		mensaje += idInput + '<br>';
+         		mensaje += idEncabezado + '<br>';
+         		mensaje += idTabla + '<br>';
+         		mensaje += idImagen + '<br>';
+
+         		$('#mensaje1').html(mensaje);
+
+         	});
+         	$('#boton2').click(function(){
+         		$('#miInput').attr('size','100');
+         		$('#miInput').attr('placeholder','cambio de placeholder!!');
+         	});
+
+         	$('#boton3').click(function()
+         	{
+         		$('#miEncabezado').attr('align','right');
+         	});
+
+         	$('#boton4').click(function()
+         	{
+         		$('#miTabla').attr('border','5');
+         		$('#miTabla').attr('cellpadding','10');
+         	});
+
+         	$('#boton5').click(function()
+         	{
+         		$('#miImagen').attr('src','logos/imagen1.png');
+         	});
+         });
+
+	</script>
+</head>
+<body>
+	<input type="text" id="miInput" size="30" placeholder="Ingrese un dato">
+	<h1 id= "miEncabezado" align="center">El principio de la sabiduria es el saber.</h1>
+	<table id="miTabla" border="1" cellpadding="5">
+		<tr>
+			<td>Rojo</td>
+			<td>Verde</td>
+		</tr>
+		<tr>
+			<td>Rojo</td>
+			<td>Verde</td>
+		</tr>
+	</table>
+	<img src="logos/imagen4.png" id="miImagen" width="200" height="200">
+	<p id="mensaje1"></p>
+	<br>
+	<br>
+	<button id="boton1">Mostrar IDs</button>
+	<button id="boton2">Cambiar Input</button>
+	<button id="boton3">Cambiar Encabezado</button>
+	<button id="boton4">Cambiar Tabla</button>
+	<button id="boton5">Cambiar Imagen</button>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carrusel de Lenguajes</title>
+</head>
+<body>
+	<img src="logos/imagen1.png" id='imagen'>
+	<br>
+	<button onclick="comenzar()">Comenzar</button>
+	<button onclick="terminar()">Terminar</button>
+</body>
+<script>
+	var indice = 0;
+	var funcionComenzar = null;
+
+	function comenzar()
+	{
+		var imagenes = ['logos/imagen1.png','logos/imagen2.png','logos/imagen3.png','logos/imagen4.png','logos/imagen5.png'];
+
+		if(indice < 5 )
+		{
+			document.getElementById('imagen').src = imagenes[indice];
+			indice ++ ;
+		}
+		else
+		{
+			indice = 0;
+			document.getElementById('imagen').src = imagenes[indice];
+		}
+
+		funcionComenzar = setTimeout(comenzar,2000);
+	}
+
+	function terminar()
+	{
+		clearTimeout(funcionComenzar);
+	}
+
+</script>
+</html>

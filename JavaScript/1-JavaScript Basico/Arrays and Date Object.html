@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+</head>
+<body>
+		<h1>Arrays</h1>
+		<p id='a1'></p>
+		<p id='a2'></p>
+		<p id='a3'></p>
+		<p id='a4'></p>
+		<p id='a5'></p>
+		<h1>Fechas</h1>
+		<p id='d1'></p>
+</body>
+
+<script>
+	var array1 = ["Zorro", "Oso", "Gorila"];
+	document.getElementById('a1').innerHTML = array1;
+
+	var array2 = new Array("Rojo", "Azul", "Verde");
+	document.getElementById('a2').innerHTML = array2;
+
+	var array3 = [4.5, 3.9, 2.9];
+	document.getElementById('a3').innerHTML = array3.reverse();
+
+	var array4 = ['z', 'a',24, 50, 19];
+	document.getElementById('a4').innerHTML = array4.sort();
+
+	var equipos = ["River Plate", "America De Cali", "Gremio"];
+	var animales = ["Leopardo", "Vaca", "Cerdo"];
+	document.getElementById('a5').innerHTML = equipos.concat(animales);
+
+	var date = new Date(2014,0,25);
+	document.getElementById('d1').innerHTML = date;
+
+</script>
+</html>
