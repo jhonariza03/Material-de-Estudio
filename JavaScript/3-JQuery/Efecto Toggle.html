@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Efecto Toggle</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="jquery-1.12.2.js"></script>
+	<script>
+        $(document).ready(function(){
+        	$('button').click(function(){
+        		$('div').toggle('slow');
+        	});
+        });
+	</script>
+	<style>
+		body{
+			background:#FFFBF1;
+		}
+
+		div{
+			background: #334D4D;
+			font-weight:bold;
+			font-size:15px;
+			color:#FFFFFF;
+			width:20%;
+			height:2%;
+			text-align: center;
+			margin: 10px 0px 0px 30px;
+			border-radius: 5px;
+		}
+
+		p{
+			padding: 20px 0px 0px 0px;
+		}
+
+		button{
+			width:80px;
+			height:30px;
+			border-radius:10px;
+			background:#B3C54D;
+			margin: 10px 0px 0px 30px;
+			font-weight: bold;
+			font-size:15px;
+		}
+	</style>
+</head>
+<body>
+	<button>Toggle</button>
+	<div>
+		<p>Voy a ocultarme y luego mostrarme</p>
+	</div>
+</body>
+</html>

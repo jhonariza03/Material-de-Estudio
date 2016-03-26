@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<script src="jquery-1.12.2.js"></script>
+	<title>Eventos personalizados</title>
+</head>
+<body>
+	<p id ='mensaje'>Mensaje</p>
+	<script>
+        $(document).ready(function(){
+        	$(document).on('Frutas', {
+        		fruta: 'Fresa'
+        	}, function(event, arg1, arg2){
+                $('#mensaje').html(event.data.fruta+'<br>'+arg1+'<br>'+arg2);
+        	});
+
+        	$(document).trigger('Frutas', ['Manzana','Pera']);
+        });
+	</script>
+</body>
+
+</html>

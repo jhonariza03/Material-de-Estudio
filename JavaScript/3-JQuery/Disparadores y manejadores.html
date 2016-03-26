@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta  charset="UTF-8">
+	<script src="jquery-1.12.2.js"></script>
+	<style type="text/css" media="screen">
+		#miDiv1
+		{
+			position:absolute;
+			top:50px;
+			left:700px;
+			width: 100px;
+			height: 100px;
+			background: #12D336;
+		}
+
+		#miDiv2
+		{
+			position:absolute;
+			top: 200px;
+			left: 900px;
+			width: 100px;
+			height:100px;
+			background:#F2BB07;
+		}
+	</style>
+
+	<script>
+         $(document).ready(function(){
+            $('#boton1').on('click',function(){
+            	var mensaje = '<h1>Posicion div1</h1><br>';
+            	var miDiv1 = $('#miDiv1');
+            	var position = miDiv1.position();
+            	mensaje += 'left '+position.left+', top'+position.top+'';
+            	$('#mensaje1').html(mensaje);
+            });
+            $('#boton2').on('click',function(){
+            	var mensaje = '<h1>Posicion div2</h1><br>';
+            	var miDiv2 = $('#miDiv2');
+            	var position = miDiv2.position();
+            	mensaje += 'left '+position.left+', top'+position.top+'';
+            	$('#mensaje2').html(mensaje);
+            });
+
+            $('#miDiv1').on('mouseenter',function(){
+            	var miDiv1 = $('#miDiv1');
+            	miDiv1.height(200);
+            	miDiv1.width(200);
+            });
+
+             $('#miDiv1').on('mouseout',function(){
+            	var miDiv1 = $('#miDiv1');
+            	miDiv1.height(100);
+            	miDiv1.width(100);
+            });
+
+            $('#miDiv2').on('mouseenter',function(){
+            	var miDiv2 = $('#miDiv2');
+            	miDiv2.height(300);
+            	miDiv2.width(300);
+            });
+
+
+            $('#miDiv2').on('mouseout',function(){
+            	var miDiv2 = $('#miDiv2');
+            	miDiv2.height(100);
+            	miDiv2.width(100);
+            });
+         });
+	</script>
+</head>
+<body>
+	<div id='miDiv1'>Mi primer Div</div>
+	<div id='miDiv2'>Mi segundo Div</div>
+	<p id='mensaje1'></p>
+	<p id='mensaje2'></p>
+	<button id='boton1'>Mostrar posicion del DIV1</button>
+	<button id='boton2'>Mostrar posicion del DIV2</button>
+</body>
+</html>
