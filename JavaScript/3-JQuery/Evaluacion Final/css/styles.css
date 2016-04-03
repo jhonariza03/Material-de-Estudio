@@ -1,0 +1,46 @@
+.generalTable
+{
+	width: 40%;
+    margin-left: 30%;
+}
+
+.studentTitle
+{
+	background: darkgray;
+	width: 100%;
+	
+}
+
+.studentsTable
+{
+	width: 100%;
+}
+
+
+thead
+{
+	background: darkturquoise;
+}
+
+form
+{
+	border-style: inset;
+    border-radius: 14px;
+    padding: 15px;
+}
+
+form label
+{
+	width: 50px;
+}
+
+span
+{
+	display: none;
+}
+
+#note
+{
+	color: red;
+    font-style: oblique;
+}

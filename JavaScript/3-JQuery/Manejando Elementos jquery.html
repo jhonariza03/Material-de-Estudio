@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<script src="jquery-1.12.2.js"></script>
+	<script>
+	   $(document).ready(function(){
+	   		$('#agregarcarro').click(function(event)
+	   		{
+	   			event.preventDefault();
+	   			var nombrecarro = $('#nombre').val();
+	   			var valorcarro = $('#valor').val();
+	   			$('<option/>').attr('value',valorcarro).text(nombrecarro).appendTo('#carros');
+	   		});
+
+	   		$('#quitarcarro').click(function(event){
+	   			event.preventDefault();
+	   			var $select = $('#carros');
+	   			$('option:selected',$select).remove();
+	   		});
+	   });
+	</script>
+</head>
+<body>
+	<form>
+		<h3 for='carros'>Carros</h3>
+		<select id="carros" multiple>
+		</select><br>
+		<button id='quitarcarro'>Borrar carro seleccionado</button>
+		<p for='nuevoNombre'>Nombre del Carro</p>
+		<input type="text" id="nombre">
+		<p for='newColorValue'>Valor del Carro</p>
+		<input type="text" id="valor"><br>
+		<button id='agregarcarro'>Añadir Carro</button>
+	
+	</form>
+</body>
+</html>

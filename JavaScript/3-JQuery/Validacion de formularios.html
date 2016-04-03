@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Plugin Validator</title>
+	<script src="jquery-1.12.2.js"></script>
+	<script src="jquery.validate.js"></script>
+	<script>
+        $(document).ready(function(){
+        	$('#formulario').validate();
+        });
+	</script>
+	<style type="text/css" media="screen">
+		.nombre, .telefono, .apellidos, .email{
+			width: 5%;
+			float: left;
+		}
+
+		#nombre, #apellidos, #telefono, #email{
+			width: 150px
+		}
+		
+	</style>
+</head>
+<body>
+	<form  method="post" id='formulario'>
+		<h4>Ingrese sus datos.</h4>
+		<hr>
+			<label class='nombre'>Nombres:</label>
+			<input type="text" name="nombre" id="nombre" class="required">
+			<br>
+			<label class='apellidos'>Apellidos:</label>
+			<input type="text" name="apellidos" id="apellidos" class="required">
+			<br>
+			<label class='telefono'>Telefono:</label>
+			<input type="text" name="telefono" id="telefono" class="required">
+			<br>
+			<label class='email'>Email:</label>
+			<input type="text" name="email" id="email" class="required email">
+			<br>
+			<br>
+			<input type="submit" id="enviar" value="Enviar">
+			<hr>
+	</form>
+</body>
+</html>

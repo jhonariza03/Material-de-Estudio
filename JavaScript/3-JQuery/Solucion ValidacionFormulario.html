@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Validacion de Formularios</title>
+
+
+    <script src="jquery.js"></script>
+    <script src="jquery.validate.js"></script>
+
+   
+
+    <script>
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("Incio sesión exitoso!");
+            $("#usuario").val("");
+            $("#password").val("");
+            $("#edad").val("");
+            $("#lugar").val("");
+        }
+    });
+
+    $().ready(function() {
+        // validate the form when it is submitted
+        var validator = $("#miForm").validate({
+            errorPlacement: function(error, element) {
+                // Append error within linked label
+                $(element)
+                    .closest("form")
+                    .find("label[for='" + element.attr("id") + "']")
+                    .append(error);
+            },
+            errorElement: "span",
+            messages: {
+                usuario: {
+                    required: " (Por Favor ingrese su Nombre de Usuario)",
+                    minlength: " (De tener minimo 3 caracteres)"
+                },
+                password: {
+                    required: " (Por Favor Ingrese su Contraseña)",
+                    minlength: " (Debe tener entre 5 y 12 caracteres)",
+                    maxlength: " (Debe tener entre 5 y 12 caracteres)"
+                }
+                ,
+                edad: {
+                    required: " (Por Favor ingrese su edad)"
+                }
+                ,
+                lugar: {
+                    required: " (Por Favor ingrese su Lugar de Nacimiento)"
+                }
+            }
+        });
+
+    });
+    </script>
+
+
+     <style>
+    .miForm fieldset p label span.error {
+        color: red;
+    }
+    form.miForm {
+        width: 30em;
+        background-color: orange;
+    }
+    form.miForm legend,
+    form.miForm label {
+        color: #1711C4;
+    }
+    form.miForm fieldset {
+        border: 1px solid #999;
+        border-radius: 8px;
+        border-color: #1711C4;
+        box-shadow: 0 0 10px #999;
+    }
+    form.miForm label {
+        width: auto;
+        display: block;
+        float: none;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    
+
+    <div id="miDiv" align="center">
+
+
+        <form method="get" class="miForm" id="miForm" action="">
+            <fieldset>
+                <legend>Registro de Usuario</legend>
+                <p>
+                    <label for="usuario">Nombre de Usuario</label>
+                    <input id="usuario" name="usuario" required minlength="3">
+                </p>
+                <p>
+                    <label for="password">Contraseña</label>
+                    <input id="password" type="password" maxlength="12" name="password" required minlength="5">
+                </p>
+                <p>
+                    <label for="edad">Edad</label>
+                    <input id="edad" type="text"  name="edad" required >
+                </p>
+                 <p>
+                    <label for="lugar">Lugar de Nacimiento</label>
+                    <input id="lugar" type="text"  name="lugar" required >
+                </p>
+                <p>
+                    <input class="submit" type="submit" value="Enviar">
+                </p>
+            </fieldset>
+        </form>
+
+
+    </div>
+
+
+</body>
+
+</html>

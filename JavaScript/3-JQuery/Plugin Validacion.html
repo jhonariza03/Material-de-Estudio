@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Plugins JQuery</title>
+	<script src="jquery-1.12.2.js"></script>
+	<script src="jquery.validate.js"></script>
+	<script>
+	    $.validator.setDefaults({
+	    	 submitHandler : function(){
+	    	 	alert('Inicio de Sesion Exitoso');
+	    	 	$('#usuario').val('');
+	    	 	$('#password').val('');
+	    	 	$("#edad").val("");
+            	$("#lugar").val("");
+	    	 }
+	    });
+        $(document).ready(function(){
+        	var validator = $('#miForm').validate({
+        		errorPlacement: function(error,element){
+        			$(element).closest('form')
+        			.find("label[for='"+element.attr("id")+"']")
+        			.append(error);
+        		},
+        		errorElement : 'span',
+        		messages:{
+        			usuario:{ //usuario es el name del input
+        				required: '(Por favor ingrese su nombre de usuario)',
+        				minlength: '(Debe tener minimo 3 caracteres)'
+        			},
+        			password:{ //password es el name del input
+        				required:'(Por favor ingrese su contraseña)',
+        				minlength:'(Debe tener entre 5 y 12 caracteres )',
+        				maxlength: '(Debe tener entre 5 y 12 caracteres)'
+        			},
+	                edad: {
+	                    required: " (Por Favor ingrese su edad)"
+	                },
+	                lugar: {
+	                    required: " (Por Favor ingrese su Lugar de Nacimiento)"
+	                }
+        		}
+        	});
+        });
+	</script>
+	<style type="text/css">
+		.miForm fieldset p label span.error
+		{
+			color: red;
+		}
+
+		form.miForm
+		{
+			width: : 30em;
+			background-color: #40FF80;
+		}
+
+		form.miForm legend,
+		form.miForm label{
+			color: #1711c4;
+		}
+		form.miForm fieldset{
+			border: 1px solid #999;
+			border-radius: 8px;
+			border-color: #1711c4;
+			box-shadow: 0 0 10px #999;
+		}
+		form.miForm label{
+			width: auto;
+			display: block;
+			float: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Plugin de validacion con jQuery</h1>
+	<div id='miDiv' align="center">
+	<form action="" method="get" class='miForm' id='miForm'>
+		<fieldset>
+			<legend>Iniciar Sesion</legend>
+			<p>
+				<label for='usuario'>Nombre de Usuario</label>
+				<input type="text" id='usuario' name="usuario" value="" required minlength = '3'>
+			</p>
+			<p>
+				<label for='password'>Contraseña</label>
+				<input type="password" name="password" id="password" maxlength="12" required minlength='5'>
+			</p>
+			 <p>
+                <label for="edad">Edad</label>
+                <input id="edad" type="text"  name="edad" required >
+            </p>
+            <p>
+                <label for="lugar">Lugar de Nacimiento</label>
+                <input id="lugar" type="text"  name="lugar" required >
+            </p>
+			<p>
+			<input type="submit" class="submit" value="Iniciar">
+			</p>
+		</fieldset>
+	</form>
+	</div>
+</body>
+</html>

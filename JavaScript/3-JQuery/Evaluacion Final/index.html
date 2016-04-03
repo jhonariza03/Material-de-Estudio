@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'UTF-8'>
+	<title>Evaluacion JQuery</title>
+	<script src="js/jquery-1.12.2.js"></script>
+	<script src="js/jquery.validate.js"></script>
+	<script src="js/students.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<table class="generalTable">
+		<caption>Calificaciones Estudiantes</caption>
+		<thead>
+			<tr>
+				<th colspan="4">Next University</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="3">
+					<form id='studentForm' method="get">
+						<div><label for='code'>Codigo:</label>
+						<input type="text" id="code" name="code" required ><span> Ingrese el codigo de Estudiantes</span></div>
+						<hr>
+						<div><label for='name'>Nombre:</label>
+						<input type="text" id="name" name="name" required ><span> Ingrese su Nombre</span></div>
+						<hr>
+						<div><label for='qualify'>Nota:</label>
+						<input type="number" id="qualify" name="qualify" required ><span> Ingrese la Nota del estudiante</span></div>
+						<hr>
+						<br>
+						<br>
+						<input id="bottonReg" type="submit" value="Registrar Estudiante" class="submit"></input>
+					</form>
+				</td>
+			</tr>
+			<tr style="height: 20px;"></tr>
+			<tr>
+				<td align="center">
+					<input type="button" name="studentAverage" id="studentAverage" value="Mostrar Promedio">
+				</td>
+				<td align="center">
+					<input type="button" name="bestQualify" id="bestQualify" value="Mostrar Nota Mayor">
+				</td>
+				<td align="center">
+					<input type="button" name="badQualify" id="badQualify" value="Mostrar Nota Menor">
+				</td>
+			</tr>
+			<tr style="height:10px;">
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<fieldset>
+						<legend>Lista de Estudiantes</legend>
+						<p id='students'></p>
+					</fieldset>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4">
+					<fieldset>
+						<legend>Estudiantes que pasan la materia</legend>
+						<p id='studentsPass'></p>
+						<p id='note'>Para pasar la materia el estudiante debe tener una nota igual o superior a 3.0</p>
+					</fieldset>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
