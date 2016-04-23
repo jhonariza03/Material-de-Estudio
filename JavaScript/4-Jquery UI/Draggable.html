@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejemplo Draggable</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		//http://api.jqueryui.com/draggable
+		$(document).ready(function(){
+			var mensaje ='';
+			$('#miDiv').draggable({
+				create: function(evento, ui)
+				{
+					$('#mensaje').html(mensaje += 'Evento create!<br>');
+				}
+			});
+			
+			$('#miDiv').on('dragstart',function(evento, ui){
+				$('#mensaje').html(mensaje += 'Evento start!<br>');
+			});
+
+			$('#miDiv').on('drag',function(evento, ui){
+				$('#mensaje').html(mensaje += 'Evento drag!<br>');
+			});
+
+			$('#miDiv').on('dragstop',function(evento, ui){
+				$('#mensaje').html(mensaje += 'Evento stop!<br>');
+			});
+		});
+	</script>
+	<style type="text/css" media="screen">
+		#miDiv{
+			position:absolute;
+			top:50%;
+			left:50%;
+			width:200px;
+			height:200px;
+			margin-left:-200px;
+			margin-top:-150px;
+			border: 1px solid #808080;
+			padding:5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Ejemplo funcionalidad Arrastrar JQuery UI</h1>
+	<div id='miDiv'>Arrastra este Div!!!</div>
+	<div id='mensaje'></div>
+</body>
+</html>

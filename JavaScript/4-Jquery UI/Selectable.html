@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Selectable</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<style>
+	   #seleccionar .ui-selecting{
+	   		background: #AFEEEE;
+	   		width:100px;
+	   }
+
+	   #seleccionar .ui-selected{
+	   		background: #40e0d0;
+	   		width:100px;
+	   }
+	</style>
+	<script>
+	    $(document).ready(function(){
+            $('#seleccionar').selectable();
+        });
+	</script>
+</head>
+<body>
+	<ul id="seleccionar">
+		<li>Numero 1</li>
+		<li>Numero 2</li>
+		<li>Numero 3</li>
+		<li>Numero 4</li>
+		<li>Numero 5</li>
+	</ul>
+</body>
+</html>

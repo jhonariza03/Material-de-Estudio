@@ -1,0 +1,31 @@
+<HTML>
+<head>
+<link href="jquery-ui.css" rel="stylesheet">
+<script src="external/jquery/jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<head>
+<script>
+$(document).ready(function(){
+$( "#fecha" ).datepicker();
+});
+
+function datos(){
+	$nombre = document.getElementById("nombre").value;
+	$apellidos = document.getElementById("apellidos").value;
+	$fecha = document.getElementById("fecha").value;
+	alert($nombre+" "+ $apellidos+" nacio el " + $fecha);
+}
+
+</script>
+
+
+<body>
+<h1> Datos </h1>
+Nombre: <input type="text" name="nombre" id="nombre"><br>
+Apellidos: <input type="text" name="apellidos" id="apellidos"><br>
+Fecha de Nacimiento: <input type="text" name="fecha" id="fecha"><br>
+
+<input type="button" value="Mostrar datos" onclick="datos()">
+
+</body>
+</HTML>

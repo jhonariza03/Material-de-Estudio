@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Selectable 2</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<style>
+		.miProducto{
+			background-color:#E920B3;
+		}
+
+	   #productos .ui-selected{
+	   		color:red;
+	   		background:#FFF415;
+			font-weight:bold;
+	   }
+
+	   #productos{
+	   		margin:0;
+	   		padding:0;
+	   		list-style-type:none;
+	   		width:300px;
+	   }
+
+	   #productos li{
+	   		margin:5px;
+	   		padding:5px;
+	   }
+	</style>
+	<script>
+	    $(document).ready(function(){
+	    	var eventos= '';
+            $('#productos').selectable({
+            	selected: function(event, ui){
+            		var seleccionados = $('li[class$="ui-selected"]').length;
+            		$('#itemSelect').html('Has seleccionado '+seleccionados+' productos!!!');
+            		$('#mensaje').html(eventos += 'Evento selected!!!<br>');
+            	},
+
+            	unselected: function(event,ui){
+            		$('#eventos').html(eventos += 'Evento unselected!!<br>');
+            	},
+            	start: function(e){
+            		$('#eventos').html(eventos += 'Evento start!!<br>');
+            	},
+            	stop: function(e){
+            		$('#eventos').html(eventos += 'Evento stop!!<br>');
+            	}
+            });
+        });
+	</script>
+</head>
+<body>
+	<ul id="productos">
+		<li class="miProducto">Producto 1</li>
+		<li class="miProducto">Producto 2</li>
+		<li class="miProducto">Producto 3</li>
+		<li class="miProducto">Producto 4</li>
+		<li class="miProducto">Producto 5</li>
+		<li class="miProducto">Producto 6</li>
+		<li class="miProducto">Producto 7</li>
+		<li class="miProducto">Producto 8</li>
+		<li class="miProducto">Producto 9</li>
+		<li class="miProducto">Producto 10</li>
+	</ul>
+	<p id="itemSelect"></p>
+	<p id="eventos"></p>
+</body>
+</html>

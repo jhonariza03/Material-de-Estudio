@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sortable 2</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<style>
+	   #miLista1, #miLista2, #miLista3{
+	   		margin: 0;
+	   		padding:0;
+	   		list-style-type:none;
+	   		width:200px;
+	   		height: 170px;
+	   }
+	   #miLista1 li,#miLista2 li,#miLista3 li
+	   {
+			padding:0.4em;
+			margin: 0 5px 5px 5px;
+			font-size:20px;
+			height:18px;
+			padding-left:1.5em;
+	   }
+	   .equipo{
+	   		background:#1017E8;
+	   		color:#FFFFFF;
+	   		border: 1px solid #75C9FF;
+	   }
+
+	   .contenedorHijo{
+	   		width: 150px;
+
+	   }
+
+	   .contenedorPadre{
+			display:table-row-group;
+	   }
+	</style>
+	<script>
+	    $(document).ready(function(){
+	    	var mensaje ='';
+            $('#miLista1').sortable({
+            	start: function(event, ui){
+            		$('#mensaje').html(mensaje += 'evento start desde lista 1! <br>');
+            	},
+            	receive : function(event,ui){
+            		$('#mensaje').html(mensaje += 'evento receive desde lista 1! <br>');
+            	},
+            	stop : function(event,ui){
+            		$('#mensaje').html(mensaje += 'evento stop desde lista 1! <br>');
+            	},
+            	connectWith: '#miLista1,#miLista2,#miLista3'
+            });
+
+            $('#miLista2').sortable({
+            	start: function(event, ui){
+            		$('#mensaje').html(mensaje += 'evento start desde lista 2! <br>');
+            	},
+            	receive : function(event,ui){
+            		$('#mensaje').html(mensaje += 'evento receive desde lista 2! <br>');
+            	},
+            	stop : function(event,ui){
+            		$('#mensaje').html(mensaje += 'evento stop desde lista 2! <br>');
+            	},
+            	connectWith: '#miLista1,#miLista2,#miLista3'
+            });
+
+             $('#miLista3').sortable({
+            	start: function(event, ui){
+            		$('#mensaje').html(mensaje += 'evento start desde lista 3! <br>');
+            	},
+            	receive : function(event,ui){
+            		$('#mensaje').html(mensaje += 'evento receive desde lista 3! <br>');
+            	},
+            	stop : function(event,ui){
+            		$('#mensaje').html(mensaje += 'evento stop desde lista 3! <br>');
+            	},
+            	connectWith: '#miLista1,#miLista2,#miLista3'
+            });
+
+
+        });
+	</script>
+</head>
+<body>
+	<h1>Arrastrar Equipo a los Grupos</h1>
+	<div class="contenedorPadre">
+	
+	<h2>Grupo 1</h2>
+	<div class="contenedorHijo">
+		<ul id="miLista1">
+			<li class="equipo">Dinamo de Kiev</li>
+		</ul>
+	</div>
+	
+	<h2>Grupo 2</h2>
+	<div class="contenedorHijo">
+		<ul id="miLista2">
+			<li class="equipo">CSKA Moscu</li>
+		</ul>
+	</div>
+	
+	<h2>Equipos</h2>
+	<div class="contenedorHijo">
+		<ul id="miLista3">
+			<li class="equipo">Bayern Munich</li>
+			<li class="equipo">Roma</li>
+			<li class="equipo">Manchester City</li>
+			<li class="equipo">Barcelona</li>
+			<li class="equipo">Arsenal</li>
+			<li class="equipo">Real Madrid</li>
+		</ul>
+	</div>
+	</div>
+	<br>
+	<p id="mensaje"></p>
+</body>
+</html>

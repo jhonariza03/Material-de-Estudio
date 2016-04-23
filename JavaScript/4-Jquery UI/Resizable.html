@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Resizable</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<style>
+		#tamano{
+			width: 100px;
+			height: 100px;
+			background: #ccc;
+		}
+	</style>
+	<script>
+        $(document).ready(function(){
+            $('#tamano').resizable();
+        });
+	</script>
+</head>
+<body>
+	<p>Utilizando Resizable</p>
+	<input type="button" id="tamano" value="Ejemplo">
+</body>
+</html>
