@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Efectos</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#boton1').click(function(){
+				$('#parrafo1').addClass('miEstilo1',3000,'easeInCirc')
+			});
+
+			$('#boton2').click(function(){
+				$('#parrafo1').removeClass('miEstilo1',3000,'easeOutCubic')
+			});
+		});
+	</script>
+	<style>
+		.miEstilo1{
+			font-style:oblique;
+			font-size:50px;
+			color:#10D3C0;
+		}
+
+	
+		
+	</style>
+</head>
+<body>
+	<p id="parrafo1">El sabio puede sentarse en un hormiguero, pero solo el necio se queda sentado en el.</p>
+	<button id="boton1">Agregar Clase!</button>
+	<button id="boton2">Remover Clase!</button>
+</body>
+</html>

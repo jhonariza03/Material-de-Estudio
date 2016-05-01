@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animate</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#boton1').click(function(){
+				$('#miDiv').animate({
+					color:'yellow',
+					backgroundColor:'green',
+					borderTopColor:'blue'
+				})
+			});
+		});
+	</script>
+	<style>
+		.miEstilo1{
+			background-color:red;
+			border-top:groove;
+			width:200px;
+			height:200px;
+		}
+	</style>	
+</head>
+<body>
+	<div id="miDiv" class="miEstilo1">MI DIV!!!</div>
+	<button id="boton1">Animacion de color!</button>
+</body>
+</html>

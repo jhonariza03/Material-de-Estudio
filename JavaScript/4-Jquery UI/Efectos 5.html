@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="us">
+
+<head>
+    <meta charset="utf-8">
+    <title>jQuery UI Example Page</title>
+    <link rel="stylesheet" href="js/jquery-ui.css">
+    <script src="js/external/jquery/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <style>
+
+    .miEstilo {
+        background-color: purple;
+        width: 400px;
+        height: 400px;
+    }
+
+    </style>
+
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        $("#boton1").click(function() {
+
+            $("#miDiv").effect("fade", 4000, function() {
+             $(this).show();
+            });
+
+        });
+
+        $("#boton2").click(function() {
+
+            $("#miDiv").effect("clip", 4000, function() {
+             $(this).show();
+            });
+
+        });
+
+         $("#boton3").click(function() {
+
+            $("#miDiv").effect("fold", 4000, function() {
+             $(this).show();
+            });
+
+        });
+
+          $("#boton4").click(function() {
+
+            $("#miDiv").effect("drop", 4000, function() {
+             $(this).show();
+            });
+
+        });
+
+      $("#boton5").click(function() {
+
+            $("#miDiv").effect("puff", 4000, function() {
+             $(this).show();
+            });
+
+        });
+
+       $("#boton6").click(function() {
+
+            $("#miDiv").effect("pulsate", 4000, function() {
+             $(this).show();
+            });
+
+        });
+
+
+        $("#boton7").click(function() {
+
+            $("#miDiv").hide("explode", 4000);
+
+        });
+
+          $("#boton8").click(function() {
+
+            $("#miDiv").show("shake", 4000);
+
+        });
+
+   
+
+    })
+    </script>
+
+</head>
+
+<body>
+
+
+    <div id="miDiv" class="miEstilo">
+        Mi div !!!!!!!!!!
+    </div>
+
+
+
+    <button id="boton1">Efecto fade! </button>
+    <button id="boton2">Efecto clip! </button>
+    <button id="boton3">Efecto fold! </button>
+    <button id="boton4">Efecto drop! </button>
+    <button id="boton5">Efecto puff! </button>
+    <button id="boton6">Efecto pulsate! </button>
+    <button id="boton7">Efecto Hide! </button>
+    <button id="boton8">Efecto Show! </button>
+
+
+
+
+</body>
+
+</html>

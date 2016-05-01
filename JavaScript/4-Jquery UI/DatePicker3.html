@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Fecha</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<style>
+		.ui-datepicker-tittle{
+			color:#000;
+		}
+
+		.ui-datepicker-header{
+			background: :#CCC;
+		}
+	</style>
+	<script>
+		$(document).ready(function(){
+			$('#date').datepicker({
+				showOtherMonths: true,
+				selectOtherMonths: true,
+				showOn: 'button',
+				buttonImage: 'js/images/calendar.gif',
+				buttonImageOnly: true,
+				buttonText:'Seleccione la fecha',
+				onSelect: function(date) {
+            			alert("La fecha seleccionada es: "+date);
+            		}
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<p>Fecha: <input type="text" id="date"></p>
+
+</body>
+</html>

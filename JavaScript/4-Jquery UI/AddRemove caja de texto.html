@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Efectos</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#boton1').click(function(){
+				$('#input1').addClass('miEstilo1',3000,'easeOutBack')
+			});
+
+			$('#boton2').click(function(){
+				$('#input1').removeClass('miEstilo1',3000,'easeOutElastic')
+			});
+		});
+	</script>
+	<style>
+		.miEstilo1{
+			background-color:#C416E7;
+			color:#E2EEF1;
+			width:200px;
+			height:50px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="input1" value="Mi Caja de texto">
+	<button id="boton1">Agregar Clase!</button>
+	<button id="boton2">Remover Clase!</button>
+</body>
+</html>

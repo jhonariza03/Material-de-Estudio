@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Efectos</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#boton1').click(function(){
+				$('#miDiv').addClass('miEstilo2',1000,'easeOutExpo')
+			});
+
+			$('#boton2').click(function(){
+				$('#miDiv').removeClass('miEstilo2',1000,'easeInOutQuint')
+			});
+		});
+	</script>
+	<style>
+		.miEstilo1{
+			background-color:red;
+			width:200px;
+			height:200px;
+		}
+
+		.miEstilo2{
+			background-color:yellow;
+			width:50px;
+			height:50px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="miDiv" class="miEstilo1">
+		MI DIV!!!!!!!!!
+	</div>
+	<button id="boton1">Agregar Clase!</button>
+	<button id="boton2">Remover Clase!</button>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+        $(document).ready(function(){
+             $('button, p, h1')
+             .button()
+             .click(function(event){
+                event.preventDefault();
+             });
+             $('#carros').menu();
+             $('#cuadro').dialog();
+        });
+	</script>
+	<style>
+		.ui-menu{
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Botones</h2>
+	<button>Etiqueta Button</button>
+	<h1>Etiqueta H1</h1>
+	<p>Etiqueta P</p>
+
+	<h2>Menu</h2>
+	<ul id="carros">
+		<li>Nissan</li>
+		<li>Ford</li>
+		<li>Chevrolet</li>
+		<li>Hyunday</li>
+		<li>Toyota
+			<ul>
+				<li>Fortuner</li>
+				<li>TXL</li>
+			</ul>
+		</li>
+		<li>Renault
+			<ul>
+				<li>Sandero</li>
+				<li>Koleos</li>
+			</ul>
+		</li>
+		<li class="ui-state-disabled">Kia</li>
+	</ul>
+	<div id="cuadro" title="Cuadro de Dialogo">
+		<p>Aqui se muestra el mensaje del cuadro de dialogo.</p>
+	</div>
+</body>
+</html>

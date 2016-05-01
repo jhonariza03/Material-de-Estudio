@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Barra de progreso</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<style>
+		#ui-barra_determ{
+			position:relative;
+		}
+
+		#texto_barra{
+			position:absolute;
+			left:50%;
+			top:50px;
+			font-weight:bold;
+		}
+	</style>
+	<script>
+		 $(document).ready(function(){
+              $('#barra_deter').progressbar({
+              	value:30
+              });
+
+               $('#barra_deter2').progressbar({
+              	value:70
+              });
+
+               $('#barra_indet').progressbar({
+              	value:false
+              });
+		 });
+	</script>
+	  
+	
+</head>
+<body>
+	<h3>Barra Determinada:</h3>
+	<div id="barra_deter"></div>
+	<hr>
+	<h3>Barra Determinada:</h3>
+	<div id="barra_deter2"></div>
+	<hr>
+	<h3>Barra Indeterminada:</h3>
+	<div id="barra_indet"></div>
+</body>
+</html>

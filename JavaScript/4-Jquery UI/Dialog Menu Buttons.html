@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cuadro de dialogo</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+         $(document).ready(function(){
+              $('#dialog').dialog({
+              	autoOpen: false
+              });
+
+              $('#boton').button().click(function(event){
+                  $('#dialog').dialog('open');
+              });
+         });
+	</script>
+</head>
+<body>
+	<div id="dialog" title="Dialog">
+		<p>Es una ventana que se posiciona en una parte de nuestra pagina, cuenta con una barra de titulo
+		y un espacio de contenido. Podemos moverla, cambiar su tamaño y cerrar mediante el ícono por 
+		defecto "X" que posee.</p>
+	</div>
+	<button id="boton">Dialogo</button>
+</body>
+</html>

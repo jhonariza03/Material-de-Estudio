@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animate 3</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#nombre').blur(function(){
+				if($('#nombre').val().trim().length == 0){
+					$('#nombre').animate({
+						outlineColor:'black',
+						backgroundColor:'red'
+					});
+				}
+				else{
+					$('#nombre').animate({
+						outlineColor:'black',
+						backgroundColor:'white'
+					});
+				}
+			});
+
+			$('#apellido').blur(function(){
+				if($('#apellido').val().trim().length == 0){
+					$('#apellido').animate({
+						outlineColor:'black',
+						backgroundColor:'red'
+					});
+				}
+				else{
+					$('#apellido').animate({
+						outlineColor:'black',
+						backgroundColor:'white'
+					});
+				}
+			});
+
+			$('#boton1').click(function(){
+				alert('Datos Enviaos Exitosamente');
+				$('#nombre').val('');
+				$('#apellido').val('');
+			});
+		});
+	</script>
+	<style>
+
+	</style>	
+</head>
+<body>
+	<form>
+		Nombre:
+		<input type="text" id="nombre" class="requerido">
+		<br>
+		<br>
+		Apellido:
+		<input type="text" id="apellido" class="requerido">
+		<br>
+		<br>
+	</form>
+	<button id="boton1">Enviar</button>
+</body>
+</html>

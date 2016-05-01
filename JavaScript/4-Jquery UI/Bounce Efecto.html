@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animate 4</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+	<script src="js/external/jquery/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#boton1').click(function(){
+				var distance = parseInt($('#miInput').val());
+				$('#miDiv1').effect('bounce',{
+					distance: distance// distancia en piveles en la que podra rebotar el elemneto Div.
+				},3000,function(){
+					$(this).show();
+				});
+			});
+		});
+	</script>
+	<style>
+		.miEstilo1{
+			background-color:purple;
+			color:white;
+			font-size:20px;
+			width:200px;
+			height:200px;
+		}
+		#miInput{
+			width:100px;
+		}
+	</style>	
+</head>
+<body>
+	<h1>Opciones efecto Bounce</h1>
+	<input type="text" id="miInput" value="20" name="quantity" min="1">
+	<br>
+	<br>
+	<button id="boton1">Bounce</button>
+	<br>
+	<br>
+	<div id="miDiv1" class="miEstilo1">Mi Div 1!!!</div>
+</body>
+</html>

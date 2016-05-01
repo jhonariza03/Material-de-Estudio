@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	 <link rel="stylesheet" href="js/jquery-ui.css">
+    <script src="js/external/jquery/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <style>
+    	#contenedor{
+    		width:400px;
+    		height:150px;
+    	}
+    	#caja{
+    		margin:0;
+    		text-align:center;
+    	}
+    	
+    </style>
+    <script>
+         $(document).ready(function(){
+             $('#boton').click(function(){
+             	$('#caja').hide('scale',2000);
+             });
+
+              $('#boton2').click(function(){
+             	$('#caja').show('explode',2000);
+             });
+         });
+    </script>
+</head>
+<body>
+	<div id="contenedor">
+		<div id="caja" class="ui-widget-content ui-corner-all">
+			<h3 class="ui-widget-header ui-corner-all">HTML</h3>
+			<p>
+				Es un lenguaje utilizado para el desarrollod e paginas web. <br>
+				Podemos utilizar cualquier editor para modificar o manipular
+				el contenido de un documento HTML.
+			</p>
+		</div>
+	</div>
+	<br>
+	<br>
+	<button id="boton" class="ui-state-default ui-corner-all">Ocultar con Efecto!!!</button>
+	<button id="boton2" class="ui-state-default ui-corner-all">Mostrar con Efecto!!!</button>
+</body>
+</html>
