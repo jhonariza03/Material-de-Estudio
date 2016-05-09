@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tooggle</title>
+	<link rel="stylesheet" href="js/jquery-ui.css">
+    <script src="js/external/jquery/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <style>
+    	#contenedor{
+    		width:400px;
+    		height:180px;
+    		margin:0px auto;
+    	}
+    	#caja h3{
+    		margin:0px;
+    		text-align:justify;
+    	}
+
+    	#boton{
+    		width:100px;
+    		height:30px;
+
+    	}
+    </style>
+    <script>
+	    $(document).ready(function(){
+	    	$('#boton').click(function(){
+              $('#caja').toggle('blind',1000);
+	    	});
+	    });
+    </script>
+</head>
+<body>
+	<div id="contenedor">
+		<div id="caja" class="ui-widget-content ui-corner-all">
+			<h3 class="ui-widget-header ui-corner-all">Tooggle</h3>
+			<p>
+				El efecto Toogle(), nos permite ocultar y mostrar elementos de una pagina web.<br>
+				Si el elemento esta oculto, pasara a visible.<br>
+				Si el elemento esta visible, pasara a Oculto.
+			</p>
+		</div>
+	</div>
+	<center><button id="boton" class="ui-state-default ui-corner-all">Mostrar Efecto</button></center>
+</body>
+</html>
