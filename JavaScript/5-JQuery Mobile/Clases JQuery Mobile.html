@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale=1" charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+	<script src="jquery.mobile-1.4.5/jquery-1.12.2.js"></script>
+	<script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#boton1').click(function(){
+				var cateto1 = $('#cateto1').val();
+				var cateto2 = $('#cateto2').val();
+				var hipotenusa = Math.sqrt(Math.pow(cateto1,2)+Math.pow(cateto2,2));
+				$('#hipotenusa').val(hipotenusa);
+
+			});
+
+			$('#boton2').click(function(){
+				$('#cateto1').val('');
+				$('#cateto2').val('');
+				$('#hipotenusa').val('');
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<div data-role="page" id="pagina1">
+		<div data-role="header">
+			<h1>Teorema de Pitágoras</h1>
+		</div>
+		<div data-role="content">
+			<form>
+				<div class="ui-field-contain">
+					<label for="cateto1">Cateto 1:</label>
+					<input type="text" name="cateto1" id="cateto1" class="ui-corner-all ui-shadow ui-overlay-shadow">
+					<label for="cateto2">Cateto 2:</label>
+					<input type="text" name="cateto2" id="cateto2" class="ui-corner-all ui-shadow ui-overlay-shadow">
+					<label for="hipotenusa">Hipotenusa:</label>
+					<input type="text" name="hipotenusa" id="hipotenusa" class="ui-corner-all ui-shadow ui-overlay-shadow" disabled>
+				</div>
+				<a id="boton1" class="ui-btn ui-corner-all ui-shadow ui-overlay-shadow">Calcular</a>
+				<a id="boton2" class="ui-btn ui-corner-all ui-shadow ui-overlay-shadow">Limpiar</a>
+			</form>
+		</div>
+		<div data-role="footer">
+			<p align="center">Teorema de Pitágoras</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale=1" charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+	<script src="jquery.mobile-1.4.5/jquery-1.12.2.js"></script>
+	<script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#boton1').click(function(){
+               var nombre = $('#nombre').val();
+               var apellido = $('#apellido').val();
+
+               alert('Hola '+nombre+ ' '+apellido+' como estas');
+               $('#nombre').val('');
+               $('#apellido').val('');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div data-role ="page" id="pagina1">
+		<div data-role="header">
+			<h1>Hola mundo desde JQuery Mobile</h1>
+		</div>
+		<div data-role="content">
+			<form>
+				<div class="ui-field-contain">
+					<label for="nombre">Nombre:</label>
+					<input type="text" name="nombre" id="nombre">
+					<label for="apellido">Apellido:</label>
+					<input type="text" name="apellido" id="apellido">	
+				</div>
+				<input type="button" id="boton1" value="Enviar">
+			</form>
+		</div>
+		<div data-role="footer">
+			<p align="center">Next University</p>
+		</div>
+	</div>
+</body>
+</html>
