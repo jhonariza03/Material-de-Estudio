@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale=1" charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+	<script src="jquery.mobile-1.4.5/jquery-1.12.2.js"></script>
+	<script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+		$('#paginaCalculoDensidad').on('swipe', function(){
+			var masa = parseFloat($('#masa').val());
+			var volumen = parseFloat($('#volumen').val());
+			var densidad = masa / volumen;
+			$('#densidad').val(densidad);
+		});
+		$('#btnLimpiar').click(function(){
+			$('#masa').val('');
+			$('#volumen').val('');
+			$('#densidad').val('');
+		});
+	});
+	</script>
+</head>
+<body>
+	<div data-role="page" id="paginaCalculoDensidad">
+		<div data-role="header">
+			<h1>Densidad</h1>
+		</div>
+		<div data-role="content">
+			<form>
+				<div class="ui-field-contain">
+					<label for="masa">Masa(Kg):</label>
+					<input type="text" name="masa" id="masa">
+				</div>
+				<div class="ui-field-contain">
+					<label for="volumen">Volumen(m3):</label>
+					<input type="text" name="volumen" id="volumen">
+				</div>
+				<div class="ui-field-contain">
+					<label for="densidad">Densidad(Kg/m3):</label>
+					<input type="text" name="densidad" id="densidad" readonly="true">
+				</div>
+				<a id="btnLimpiar" class="ui-btn">Limpiar</a>
+			</form>
+		</div>
+		<div data-role="footer">
+			<p align="center">Densidad</p>
+		</div>
+	</div>
+</body>
+</html>
