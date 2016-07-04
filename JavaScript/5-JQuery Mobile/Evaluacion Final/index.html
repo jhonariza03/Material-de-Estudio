@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale=1" charset="utf-8">
+	<title>Evaluacion Final</title>
+
+	<link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+	<link rel="stylesheet" href="css/style.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.12.2.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="js/hotel.js"></script>
+   
+</head>
+<body>
+	<div data-role="page" id="homePage">
+        <div data-role="header">
+            <h1>Gestión Hotel</h1>
+        </div>
+        <div data-role="content">
+            <form>
+                <a id="btnHotelRegister" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-overlay-shadow ui-btn ui-icon-plus ui-btn-icon-left ui-shadow-icon">Registrar Hotel</a>
+                <a id="btnHotelList" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-overlay-shadow ui-btn ui-icon-bars ui-btn-icon-left ui-shadow-icon">Lista Hoteles</a>
+            </form>
+        </div>
+        <div data-role="footer">
+            <p align="center">Gestión Hotel</p>
+        </div>
+    </div>
+    <div data-role="page" id="hotelRegisterPage">
+        <div data-role="header">
+            <h1>Registrar Hotel</h1>
+        </div>
+        <div data-role="content">
+            <form>
+                <div class="ui-field-contain">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" class="ui-corner-all ui-shadow ui-overlay-shadow">
+                </div>
+                <div class="ui-field-contain">
+                    <label>Ubicacion:</label>
+                </div>
+                <div data-role="content" id="divRegisterMap">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="address">Dirección:</label>
+                    <input type="text" name="address" id="address" class="ui-corner-all ui-shadow ui-overlay-shadow" disabled="true">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" name="phone" id="phone" class="ui-corner-all ui-shadow ui-overlay-shadow">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="stars">Estrellas:</label>
+                    <input type="text" name="stars" id="stars" class="ui-corner-all ui-shadow ui-overlay-shadow">
+                </div>
+                <a id="btnSaveRegister" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-overlay-shadow ui-icon-plus ui-btn-icon-left">Registrar Hotel</a>
+                <a data-role="button" class="ui-btn ui-icon-home ui-btn-icon-left btnBack">Volver</a>
+            </form>
+        </div>
+        <div data-role="footer">
+            <p align="center">Registrar Hotel</p>
+        </div>
+    </div>
+
+    <div data-role="page" id="hotelsListPage">
+        <div data-role="header">
+            <h1>Lista Hoteles</h1>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview" id="hotelList"  data-inset="true">
+            </ul>
+        </div>
+          <a  data-role="button" class="ui-btn ui-icon-home ui-btn-icon-left btnBack">Volver</a>
+         <div data-role="footer">
+            <p align="center">Lista Hoteles</p>
+        </div>
+    </div>
+
+
+
+     <div data-role="page" id="hotelDataPage">
+        <div data-role="header">
+            <h1>Datos del Hotel</h1>
+        </div>
+        <div data-role="content">
+            <form>
+                <div class="ui-field-contain">
+                    <label for="nameView">Nombre:</label>
+                    <input type="text" name="nameView" id="nameView" class="ui-corner-all ui-shadow ui-overlay-shadow" disabled="true">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="addressView">Dirección:</label>
+                    <input type="text" name="addressView" id="addressView" class="ui-corner-all ui-shadow ui-overlay-shadow" disabled="true">
+                    
+                </div>
+
+                <div style="display:none; border-style:none !important">
+                	<input type="text" name="latitudView" id="latitudView" >
+                    <input type="text" name="longitudView" id="longitudView" >
+                </div>
+                <div class="ui-field-contain">
+                    <label for="phoneView">Teléfono:</label>
+                    <input type="text" name="phoneView" id="phoneView" class="ui-corner-all ui-shadow ui-overlay-shadow" disabled="true">
+                </div>
+                <div class="ui-field-contain">
+                    <label for="starsView">Estrellas:</label>
+                    <input type="text" name="starsView" id="starsView" class="ui-corner-all ui-shadow ui-overlay-shadow" disabled="true">
+                </div>
+
+                <div class="ui-field-contain">
+                    <label>Ubicacion:</label>
+                </div>
+                <div data-role="content" id="divRegisterMapView">
+                </div>
+                <a id="btnRoute" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-overlay-shadow ui-btn ui-icon-navigation ui-btn-icon-left">Como llegar en Auto?</a>
+                <a id="backList" data-role="button" class="ui-btn ui-icon-home ui-btn-icon-left ">Volver</a>
+            </form>
+        </div>
+        <div data-role="footer">
+            <p align="center">Datos del Hotel</p>
+        </div>
+    </div>
+</body>
+</html>
