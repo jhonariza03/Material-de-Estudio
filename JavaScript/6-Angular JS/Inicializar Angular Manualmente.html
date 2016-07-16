@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+</head>
+<body>
+	<div ng-controller = "MainController">
+		Hola soy HTML y estoy esperando a que angular llegue...
+	</div>
+	<script src="angular.js"></script>
+	<script type="text/javascript">
+		angular.module('myDelayedApp', []).controller('MainController', ['$scope', function($scope){
+			$scope.sayHello = 'Hola, soy AngularJS, he llegado tarde!';
+			alert($scope.sayHello);
+		}]);
+
+		function manualStart(){
+			angular.element(document).ready(function(){
+				angular.bootstrap(document, ['myDelayedApp']);
+			});
+			clearTimeout(intervalo);
+		}
+		var intervalo = setInterval(function(){
+			manualStart()
+		},3000);
+	</script>
+</body>
+</html>

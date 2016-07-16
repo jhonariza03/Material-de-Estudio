@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="randomizeApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+	<div ng-controller="MainController">
+		<button ng-click="getNumber()">Pulsar para Obtener un numero cualquiera</button>
+		<h1>{{randomNumber}}</h1>
+	</div>
+</body>
+<script src="angular.js"></script>
+<script type="text/javascript">
+	angular.module('randomizeApp', []).controller('MainController', ['$scope', function($scope){
+		$scope.randomNumber = 0.0;
+		$scope.getNumber = function()
+		{
+			$scope.randomNumber = 'Aqui tienes tu numero: '+ Math.random();
+		}
+	}]);
+</script>
+</html>
