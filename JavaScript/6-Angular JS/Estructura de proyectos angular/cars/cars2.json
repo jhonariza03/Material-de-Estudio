@@ -1,0 +1,23 @@
+[
+	{
+		"model":2015,
+		"id":"new-qashqai",
+		"imageUrl":"img/cars/new qashqai.jpg",
+		"name":"NEW QASHQAI",
+		"snippet":"MADE WITH YOU IN MIND TO GIVE YOU THE HIGHEST QUALITY."
+	},
+	{
+		"model":2014,
+		"id":"Veloster",
+		"imageUrl": "img/cars/hyundai veloster.jpg",
+		"name":"Veloster",
+		"snippet":"SPORTY LIKE A COUPE. ROOMY LIKE A SEDAM."
+	},
+	{
+		"model":2015,
+		"id":"Navara",
+		"imageUrl":"img/cars/nissan navara.jpg",
+		"name":"Navara",
+		"snippet":"The Navara is all about freedom including freedom of chioce."
+	}
+]

@@ -13,11 +13,18 @@
 </head>
 <body ng-controller="CarListCtrl">
 	<ul>
-		<li ng-repeat="car in cars">
+		<li ng-repeat="car in cars | filter:query">
 			<span>{{car.name}}</span>
 			<p>{{car.snippet}}</p>
 		</li>
 	</ul>
+
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label>Filtro</label>
+			<input type="text" ng-model="query">
+		</div>
+	</form>
 </body>
 
 </html>
