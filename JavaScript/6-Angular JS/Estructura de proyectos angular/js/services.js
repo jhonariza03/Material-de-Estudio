@@ -1,26 +1,8 @@
 'use strict';
-var carAppServices = angular.module('carAppServices', []);
-carAppServices.factory('Car', [ function(){
-	return {
-		notify : function(msg)
-		{
-			alert(msg);
-		},
-		getCars: function()
-		{
-			var cars = [{
-				'name':'NEW QASHQAI',
-				'snippet':'MADE WITH YOU IN MIND TO GIVE YOU THE HIGHEST QUALITY.'
-			},
-			{
-				'name': 'Veloster',
-				'snippet':'SPORTY LIKE A COUPE. ROOMY LIKE A SEDAM.'
-			},
-			{
-				'name': 'Navara',
-				'snippet': 'The Navara is all about freedom including freedom of chioce.'
-			}];
-			return cars;
-		}
-	};
+var carAppServices = angular.module('carAppServices', ['ngResource']);
+carAppServices.factory('Car', ['$resource',
+	function($resource){
+		return $resource('cars/:carId.json',{},{
+			query:{method:'GET',params:{carId: 'cars'}, isArray:true}
+		});
 }]);

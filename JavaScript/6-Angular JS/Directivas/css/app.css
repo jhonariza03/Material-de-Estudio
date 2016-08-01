@@ -1,0 +1,38 @@
+body{
+	padding-top:0px;
+	padding-bottom:20px;
+}
+
+.container{
+	position:relative;
+	padding: 20px;
+}
+
+.title{
+	margin: 0 auto;
+	text-align:center;
+	padding:10px;
+}
+
+.center-block{
+	display:block;
+	margin-right:300px;
+	margin-left: 300px;
+	float:none;
+	padding:15px;
+	border: #603 dotted;
+}
+
+.clock-font{
+	font-size:95px;
+	font-weight:bold;
+	font-family:fantasy;
+}
+
+.frozen-font{
+	font-size:95px;
+	font-weight:bold;
+	font-family:fantasy;
+	color:red;
+}
+

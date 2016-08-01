@@ -1,0 +1,24 @@
+.efectoAnimacion{
+	transition: ease-in-out 2s;
+	-ms-transition: ease-in-out 2s;
+	-o-transition: ease-in-out 2s;
+	-webkit-transition: ease-in-out 2s;
+	-moz-transition: ease-in-out 2s;
+}
+.miEstilo{
+	font-size:large;
+}
+.efectoAnimacion.ng-enter{
+	opacity:0;
+}
+.efectoAnimacion.ng-enter-active{
+	opacity:2;
+	font-size: x-large;
+}
+.efectoAnimacion.ng-leave{
+	opacity:2;
+}
+.efectoAnimacion.ng-leave-active{
+	font-size:small;
+	opacity:0;
+}

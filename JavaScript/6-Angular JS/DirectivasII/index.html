@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- En esta demo implementaremos un directva que permita extraer informacion meteorologica de las principales ciudades del mundo
+    para lograrlo necesitamos el API de openWeatherMap, que es gratis. y una se hace uso de las directivas propias en Angular
+
+ -->
+
+<!-- ENUNCIADO!!!!!!!: 
+
+Diseñar un pagina web, utilizando AngularJS, que permita visualizar informacion Meteorologica de 10 principales ciudades
+en el mundo.
+
+La directiva debe tener restriccion tipo A, es decir que solo se podra invokar de las siguiente manera
+<div ng-clock></div>
+
+Debe utilizar template in line, no por archivos separados
+
+Debe usar scope, de esta forma podremas aislar la variable correspondiente a nuestra prediccion del clima
+
+Debe hacer Uso de la opcion LINK para al creacion de la directiva
+
+Debe verse bien, utilizar CSS para lograr el layout adecuado
+
+
+Recursos externos: los codigos y los nombre de las ciudades se pueden encontrar en el siguiente link
+URL: http://openweathermap.org/help/city_list.txt
+
+
+-->
+<html ng-app="weatherApp" > 
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+  </head>
+  <body>
+
+    <div ng-controller="forecastController">
+      <div class="container">
+        <div class="wrapper" ng-repeat="city in cities">  <!-- ng-repeat es el equivalente a FOREACH pero para HTML, este nos permite iterar sobre una coleccion y generar contenido dinamico de manera rapida -->
+          <div class="forecast-block">
+            <div ng-weather get-city="city"></div> <!-- Caad vez que instanciamos la directva esta genere el reporte de una ciudad de acuerdo al parametro 'city' -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script> <!-- por buenas practicas el inicio de nuestro aplicacion angular se encuentra en un archivo externo -->
+    <script src="js/controllers.js"></script> <!-- Controladores para nuestra app -->
+  </body>
+</html>
