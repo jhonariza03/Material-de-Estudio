@@ -1,0 +1,39 @@
+{
+    "manufacter": {
+        "name": "AKT", 
+        "country": "Colombia"
+    }, 
+    "engine": {
+        "gears": "6", 
+        "transmission": "Manual", 
+        "type": "Petrol",
+        "outburst":"Automatic & Manual",
+        "capacity":"149 cc"
+    }, 
+    "description": "This bike has in its DNA the best genes of RTX now has a Unishock system that provides greater comfort to the driver and passenger, lighter weight and a more sporty look, while retaining the motorcycle 4T SOHC whose features and characteristics have been verified by our users since 2012, when the first version of the RTX arrived in Colombia. The modern design of the bike and its lines give a very striking appearance and its price is available to those who want a bike to work or mobility and fun. Disc brakes on both wheels provide security when braking, thanks to its lobed shape that allows better performance.",  
+    "id": "rtx_unishock", 
+    "images": [
+        "img/motocycles/rtx_unishock_1.png",
+        "img/motocycles/rtx_unishock_2.png",
+        "img/motocycles/rtx_unishock_3.png",
+        "img/motocycles/rtx_unishock_4.png",
+        "img/motocycles/rtx_unishock_5.png"
+    ], 
+    "name": "RTX Unishock", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "2000 mm (w)", 
+            "760 mm (h)", 
+            "1040 mm (l)"
+        ], 
+        "weight": "149.0 Kg"
+    }, 
+    "space": {
+        "volume": "4.3 Gal"
+    },
+    "brakes":{
+        "front":"Disk",
+        "back":"Disk"
+    },
+    "power":"12.5 hp, 7000 RPM"
+}

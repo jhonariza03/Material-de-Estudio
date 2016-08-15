@@ -1,0 +1,31 @@
+[
+
+    {
+        "model": 2014, 
+        "id": "rtx_unishock", 
+        "imageUrl": "img/motocycles/rtx_unishock_1.png", 
+        "name": "RTX Unishock", 
+        "snippet": "Esta moto que tiene en su ADN los mejores genes de la RTX ahora cuenta con un sistema Unishock que brinda una mayor comodidad al piloto y pasajero."
+    },
+    {
+        "model": 2015, 
+        "id": "evor3_125", 
+        "imageUrl": "img/motocycles/evo-r3_1.png", 
+        "name": "AKT-EVO R3 125", 
+        "snippet": "A simple vista la EVO R3 impacta por su aspecto, gracias a sus líneas se destaca fácilmente."
+    },
+    {
+        "model": 2016, 
+        "id": "cr5_180", 
+        "imageUrl": "img/motocycles/cr5-180_1.png", 
+        "name": "AKT-CR5 180", 
+        "snippet": "La totalmente nueva CR-5, viene dotada de toda la tecnología y súper diseño que solo AKT puede brindarte."
+    },
+    {
+        "model": 2017, 
+        "id": "nkd_125", 
+        "imageUrl": "img/motocycles/nkd_125_1.png", 
+        "name": "NKD 125", 
+        "snippet": "La AK 125 NKD es una motocicleta tipo calle de la línea SL, diseñada esencialmente para desempeñarse sobre asfalto."
+    }
+]

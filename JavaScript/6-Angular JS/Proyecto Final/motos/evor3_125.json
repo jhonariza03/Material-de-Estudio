@@ -1,0 +1,39 @@
+{
+    "manufacter": {
+        "name": "AKT", 
+        "country": "Colombia"
+    }, 
+    "engine": {
+        "gears": "5", 
+        "transmission": "Manual", 
+        "type": "Petrol",
+        "outburst":"Automatic & Manual",
+        "capacity":"125 cc"
+    }, 
+    "description": "At first glance the EVO R3 hits in appearance, thanks to its lines is easily stands out, its front has a sporty touch that added to the LED lights and the location and design of the directional certainly captivates also is equipped with a board functional and more complete than many in its range and even higher motorcycles; but the back is not far behind, thanks to its striking stop, the shape of the tail and rear handles, will achieve that looks the traveling on to appreciate it. And talk about its side muffler stainless steel finishes in a muffler with a design completely modern and also reduces its weight by 30% is not bad, but there's more, the sliders that protect the engine in case of falls and wheels alloy aluminum blades complete the formula.",  
+    "id": "evor3_125", 
+    "images": [
+        "img/motocycles/evo-r3_1.png",
+        "img/motocycles/evo-r3_2.png",
+        "img/motocycles/evo-r3_3.png",
+        "img/motocycles/evo-r3_4.png",
+        "img/motocycles/evo-r3_5.png"
+    ], 
+    "name": "AKT-EVO R3 125", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "1990 mm (w)", 
+            "780 mm (h)", 
+            "1030 mm (l)"
+        ], 
+        "weight": "118.0 Kg"
+    }, 
+    "space": {
+        "volume": "3.46 Gal"
+    },
+    "brakes":{
+        "front":"Disk",
+        "back":"Tambor"
+    },
+    "power":"10 hp, 8000 RPM"
+}

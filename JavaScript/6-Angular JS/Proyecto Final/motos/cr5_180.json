@@ -1,0 +1,39 @@
+{
+    "manufacter": {
+        "name": "AKT", 
+        "country": "Colombia"
+    }, 
+    "engine": {
+        "gears": "6", 
+        "transmission": "Manual", 
+        "type": "Petrol",
+        "outburst":"Automatic",
+        "capacity":"180.7 cc"
+    }, 
+    "description": "The all-new CR-5, it comes equipped with all the technology and design that only super AKT can give you. Engine 4-stroke latest technology with a new 6-speed gearbox with better performance and balancer that reduces vibration for comfortable operation.",  
+    "id": "cr5_180", 
+    "images": [
+        "img/motocycles/cr5-180_1.png",
+        "img/motocycles/cr5-180_2.png",
+        "img/motocycles/cr5-180_3.png",
+        "img/motocycles/cr5-180_4.png",
+        "img/motocycles/cr5-180_5.png"
+    ], 
+    "name": "AKT-CR5 180", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "1950 mm (w)", 
+            "845 mm (h)", 
+            "1080 mm (l)"
+        ], 
+        "weight": "125.0 Kg"
+    }, 
+    "space": {
+        "volume": "3.2 Gal"
+    },
+    "brakes":{
+        "front":"Disk",
+        "back":"Tambor"
+    },
+    "power":"15 hp, 8500 RPM"
+}

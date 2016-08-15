@@ -1,0 +1,39 @@
+{
+    "manufacter": {
+        "name": "AKT", 
+        "country": "Colombia"
+    }, 
+    "engine": {
+        "gears": "5", 
+        "transmission": "Manual", 
+        "type": "Petrol",
+        "outburst":"Automatic & Manual",
+        "capacity":"125 cc"
+    }, 
+    "description": "The AK 125 is a type motorcycle NKD street line SL, designed essentially to serve on asphalt and function especially in cities, either as transportation or tool. For this reason it is a bike that exhibits excellent fuel consumption, it is lightweight and agile for easy driving in congested city traffic.",  
+    "id": "nkd_125", 
+    "images": [
+        "img/motocycles/nkd_125_1.png",
+        "img/motocycles/nkd_125_2.png",
+        "img/motocycles/nkd_125_3.png",
+        "img/motocycles/nkd_125_4.png",
+        "img/motocycles/nkd_125_5.png"
+    ], 
+    "name": "NKD 125", 
+    "sizeAndWeight": {
+        "dimensions": [
+            "1900 mm (w)", 
+            "770 mm (h)", 
+            "800 mm (l)"
+        ], 
+        "weight": "98.0 Kg"
+    }, 
+    "space": {
+        "volume": "2.6 Gal"
+    },
+    "brakes":{
+        "front":"Disk",
+        "back":"Tambor"
+    },
+    "power":"10.34 hp, 8500 RPM"
+}
